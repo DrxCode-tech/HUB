@@ -1,8 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "hub-react/package.json", "use": "@vercel/static-build" },
-    { "src": "api/*.js", "use": "@vercel/node" }
+    {
+      "src": "hub-react/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "hub-react/dist" }
+    },
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
     {
@@ -11,7 +18,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "hub-react/dist/$1"
+      "dest": "/hub-react/dist/index.html"
     }
   ]
 }
