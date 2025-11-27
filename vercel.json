@@ -1,10 +1,10 @@
 {
   "version": 2,
+  "outputDirectory": "hub-react/dist",
   "builds": [
     {
       "src": "hub-react/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "hub-react/dist" }
+      "use": "@vercel/static-build"
     },
     {
       "src": "api/**/*.js",
