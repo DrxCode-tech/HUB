@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": "hub-react/dist",
   "builds": [
     {
       "src": "hub-react/package.json",
@@ -20,5 +19,6 @@
       "src": "/(.*)",
       "dest": "/hub-react/dist/index.html"
     }
-  ]
+  ],
+  "outputDirectory": "hub-react/dist"
 }
